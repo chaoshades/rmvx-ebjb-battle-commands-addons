@@ -12,7 +12,7 @@ Adds new battle commands inspired from popular RPG series (jump, blitz, steal, t
 ## Quick start
 
 - See [dependencies](#dependencies)
-- Each battle command is self-contained within its own folder. So, move into the battle command you desire
+- Each battle command is self-contained within the `src` folder. You need to move into the battle command folder you want.
 - If needed, run this command to combine external scripts source into one file. `ruby build-ext.rb`
 - Run this command to combine core scripts source into one file. `ruby build.rb`
 - Copy the resulting files into your RPG Maker VX project 
@@ -20,11 +20,11 @@ Adds new battle commands inspired from popular RPG series (jump, blitz, steal, t
 
 OR
 
-- There is an already pre-compiled demo with the classic sample project.
+- There is an already pre-compiled demo with the classic sample project with every battle commands available.
 
 ### Dependencies
 
-The dependencies must be inserted, in the below order, before the script of this repo :
+The dependencies must be inserted, in the below order, before the scripts of this repo :
 
 - Depends on EBJB_Core : <https://github.com/chaoshades/rmvx-ebjb-core/>
 - Depends on EBJB_BattleSystem : <https://github.com/chaoshades/rmvx-ebjb-battle-system/>
