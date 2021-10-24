@@ -287,7 +287,9 @@ class Game_Actor < Game_Battler
         action.set_item(command.item.id)
       end
     elsif command.is_a?(Throw_Command)
-      action.set_throw(command.item.id)
+      if $game_party.item_can_throw?(command.item)
+        action.set_throw(command.item.id)
+      end
     else
       case command.type
       when BATTLECOMMANDS_CONFIG::BC_ATTACK 
@@ -561,6 +563,27 @@ class Game_Projectile
   
 end
 
+#==============================================================================
+# ** Game_Party
+#------------------------------------------------------------------------------
+#  This class handles the party. It includes information on amount of gold 
+# and items. The instance of this class is referenced by $game_party.
+#==============================================================================
+
+class Game_Party < Game_Unit
+  include EBJB
+  
+  #--------------------------------------------------------------------------
+  # * Determine if Weapon is Throwable
+  #     weapon : weapon
+  #--------------------------------------------------------------------------
+  def item_can_throw?(weapon)
+    return false unless weapon.is_a?(RPG::Weapon)
+    return false if item_number(weapon) == 0
+    return true
+  end
+  
+end
 #==============================================================================
 # ** Sprite_Projectile
 #------------------------------------------------------------------------------
@@ -890,9 +913,13 @@ class Scene_Battle < Scene_Base
         #@throw_window.filter = command.filter
         start_throw_selection
       elsif command.is_a?(Throw_Command)
-        Sound.play_decision
-        @actor_command_window.active = false
-        determine_throw(command.item)
+        if $game_party.item_can_throw?(command.item)
+          Sound.play_decision
+          @actor_command_window.active = false
+          determine_throw(command.item)
+        else
+          Sound.play_buzzer
+        end
       end
     else
       execute_battle_commands_bc_throw(actor)
@@ -1101,7 +1128,7 @@ class Window_ActorCommand < Window_Command
     
     if command.is_a?(Throw_Command)
       control = UCItem.new(self, command.item, rect)
-      control.active = $game_party.item_can_use?(command.item)
+      control.active = $game_party.item_can_throw?(command.item)
     else
       control = create_item_bc_throw(index)
     end
@@ -1434,7 +1461,9 @@ class Window_AutoBattle_Command < Window_Base
   alias create_item_bc_throw create_item unless $@
   def create_item(command, actor, rect)   
     if command.is_a?(Throw_Command)
-      return UCItem.new(self, command.item, rect)
+      control = UCItem.new(self, command.item, rect)
+      control.active = $game_party.item_can_throw?(command.item)
+      return control
     else
       return create_item_bc_throw(command, actor, rect)
     end

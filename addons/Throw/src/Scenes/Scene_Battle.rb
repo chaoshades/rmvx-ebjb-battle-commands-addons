@@ -106,9 +106,13 @@ class Scene_Battle < Scene_Base
         #@throw_window.filter = command.filter
         start_throw_selection
       elsif command.is_a?(Throw_Command)
-        Sound.play_decision
-        @actor_command_window.active = false
-        determine_throw(command.item)
+        if $game_party.item_can_throw?(command.item)
+          Sound.play_decision
+          @actor_command_window.active = false
+          determine_throw(command.item)
+        else
+          Sound.play_buzzer
+        end
       end
     else
       execute_battle_commands_bc_throw(actor)

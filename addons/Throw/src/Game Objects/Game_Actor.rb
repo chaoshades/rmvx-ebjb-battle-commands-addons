@@ -63,7 +63,9 @@ class Game_Actor < Game_Battler
         action.set_item(command.item.id)
       end
     elsif command.is_a?(Throw_Command)
-      action.set_throw(command.item.id)
+      if $game_party.item_can_throw?(command.item)
+        action.set_throw(command.item.id)
+      end
     else
       case command.type
       when BATTLECOMMANDS_CONFIG::BC_ATTACK 

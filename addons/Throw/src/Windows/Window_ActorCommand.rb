@@ -53,7 +53,7 @@ class Window_ActorCommand < Window_Command
     
     if command.is_a?(Throw_Command)
       control = UCItem.new(self, command.item, rect)
-      control.active = $game_party.item_can_use?(command.item)
+      control.active = $game_party.item_can_throw?(command.item)
     else
       control = create_item_bc_throw(index)
     end

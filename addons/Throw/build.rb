@@ -12,6 +12,7 @@ module EBJB_BCThrow
 	"src/Game Objects/Game_Battle_Commands.rb",
 	"src/Game Objects/Game_BattleAnimation.rb",
 	"src/Game Objects/Game_Projectile.rb",
+	"src/Game Objects/Game_Party.rb",
 	"src/Sprites Objects/Sprite_Projectile.rb",
 	"src/Scenes/Scene_BattleCommands.rb",
 	"src/Scenes/Scene_Battle.rb",
