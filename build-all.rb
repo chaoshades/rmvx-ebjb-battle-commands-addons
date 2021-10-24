@@ -6,6 +6,7 @@ module EBJB_BattleCommands_Addons
   # Build files
   BUILDS = [
 	"build/EBJB_BCJump.rb",
+	"build/EBJB_BCBlackMagic.rb",
   ]
 end
 
@@ -15,9 +16,9 @@ def ebjb_build
   Dir.glob(EBJB_BattleCommands_Addons::BUILD_PATTERN).each { |file|
     Dir.chdir File.dirname(file)
     load File.basename(file)
+	# Reset to the original working directory
+    Dir.chdir orig
   }
-  # Reset to the original working directory
-  Dir.chdir orig
   final = File.new(EBJB_BattleCommands_Addons::FINAL, "w+")
   EBJB_BattleCommands_Addons::BUILDS.each { |file|
     src = File.open(file, "r+")
