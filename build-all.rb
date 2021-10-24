@@ -7,6 +7,7 @@ module EBJB_BattleCommands_Addons
   BUILDS = [
 	"build/EBJB_BCJump.rb",
 	"build/EBJB_BCBlackMagic.rb",
+	"build/EBJB_BCWhiteMagic.rb",
   ]
 end
 
