@@ -20,6 +20,10 @@ Adds new battle commands inspired from popular RPG series (jump, blitz, steal, t
 
 OR
 
+- Run this command to combine every battle command scripts source into one file. `ruby build-all.rb`
+
+OR
+
 - There is an already pre-compiled demo with the classic sample project with every battle commands available.
 
 ### Dependencies
