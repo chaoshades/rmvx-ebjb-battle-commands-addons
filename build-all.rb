@@ -8,6 +8,7 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCJump.rb",
 	"build/EBJB_BCBlackMagic.rb",
 	"build/EBJB_BCWhiteMagic.rb",
+	"build/EBJB_BCSummonMagic.rb",
   ]
 end
 
