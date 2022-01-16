@@ -14,6 +14,7 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCTurnUndead.rb",
 	"build/EBJB_BCBlitz.rb",
 	"build/EBJB_BCInputSkills.rb",
+	"build/EBJB_BCStealMug.rb",
   ]
 end
 
