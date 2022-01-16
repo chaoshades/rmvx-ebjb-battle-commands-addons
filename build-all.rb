@@ -22,6 +22,7 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCMultiAttack.rb",
 	"build/EBJB_BCMultiSkill.rb",
 	"build/EBJB_BCMultiItem.rb",
+	"build/EBJB_BCNature.rb",
   ]
 end
 
