@@ -6,14 +6,14 @@ module EBJB_BCInputSkills
 	"src/Script_Header.rb",
     "src/BattleCommands_Config.rb",
     "src/Game Objects/Game_BattleAction.rb",
-	"src/Game Objects/Game_Battle_Commands.rb",
+    "src/Game Objects/Game_Battle_Commands.rb",
     "src/Misc Objects/UsableItemFilter.rb",
-	"src/Scenes/Scene_BattleCommands.rb",
+    "src/Scenes/Scene_BattleCommands.rb",
     "src/Scenes/Scene_Battle.rb",
-	"src/User Controls/UCInputIcon.rb",
-	"src/User Interface/Color.rb",
+    "src/User Controls/UCInputIcon.rb",
+    "src/User Interface/Color.rb",
     "src/User Interface/Vocab.rb",
-	"src/Windows/Window_InputSkill.rb",
+    "src/Windows/Window_InputSkill.rb",
   ]
 end
 
