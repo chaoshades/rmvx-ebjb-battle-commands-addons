@@ -344,7 +344,7 @@ class Scene_Battle < Scene_Base
     @button_inputting = false
     @input = false
     
-    @input_window = Window_InputSkill.new(440, 40, 180, 56, nil)
+    @input_window = Window_InputSkill.new(440, 50, 180, 56, nil)
     @input_window.opacity = 0
     @input_window.active = false
     @input_window.visible = false
