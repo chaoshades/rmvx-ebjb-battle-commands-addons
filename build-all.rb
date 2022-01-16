@@ -19,6 +19,9 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCMimic.rb",
 	"build/EBJB_BCBlueMagic.rb",
 	"build/EBJB_BCCover.rb",
+	"build/EBJB_BCMultiAttack.rb",
+	"build/EBJB_BCMultiSkill.rb",
+	"build/EBJB_BCMultiItem.rb",
   ]
 end
 
