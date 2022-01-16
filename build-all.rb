@@ -10,6 +10,7 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCWhiteMagic.rb",
 	"build/EBJB_BCSummonMagic.rb",
 	"build/EBJB_BCThrow.rb",
+	"build/EBJB_BCPray.rb",
   ]
 end
 
