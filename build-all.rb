@@ -17,6 +17,7 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCStealMug.rb",
 	"build/EBJB_BCMorphRevert.rb",
 	"build/EBJB_BCMimic.rb",
+	"build/EBJB_BCBlueMagic.rb",
   ]
 end
 
