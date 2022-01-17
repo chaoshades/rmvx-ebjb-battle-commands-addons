@@ -45,12 +45,7 @@ module EBJB
     BC_SLOT_MACHINE_SKILLS ={
       1 => 111,
       2 => 112,
-      3 => 113,
-      #4 => 205,
-      #5 => 203,
-      #6 => 201,
-      #7 => 204,
-      #8 => 200,
+      3 => 113
     }
     
     #------------------------------------------------------------------------
@@ -195,18 +190,6 @@ class Scene_Battle < Scene_Base
     end
   end
   
-#~   #--------------------------------------------------------------------------
-#~   # * Alias update_actor_command_input
-#~   #--------------------------------------------------------------------------
-#~   alias update_actor_command_input_bc_slot_machine update_actor_command_input unless $@
-#~   def update_actor_command_input
-#~     if @slot_machine_button_inputting
-#~       update_blitz_button_inputting     # Button inputting (for Blitz Command)
-#~     else
-#~       update_actor_command_input_bc_slot_machine
-#~     end
-#~   end
-  
   #--------------------------------------------------------------------------
   # * Alias execute_battle_commands
   #--------------------------------------------------------------------------
@@ -287,7 +270,7 @@ class Scene_Battle < Scene_Base
     
     start_slot_machine_inputting
     # Run Slot Machine and get the results
-    result = slot_machine(3, 1)
+    result = slot_machine(BATTLECOMMANDS_CONFIG::BC_SLOT_MACHINE_SKILLS.size)
     end_slot_machine_inputting
 
     # Determines the skill ID from the results
