@@ -24,6 +24,8 @@ module EBJB_BattleCommands_Addons
 	"build/EBJB_BCMultiItem.rb",
 	"build/EBJB_BCNature.rb",
 	"build/EBJB_BCSwordRune.rb",
+	"build/EBJB_BCSlotMachine_Ext.rb",
+	"build/EBJB_BCSlotMachine.rb",
   ]
 end
 
